@@ -11,18 +11,15 @@ async function main() {
 		    headers: {
 		       Referer: 'https://accounts.craigslist.org/login'
 		    },
-		    
 		    simple: false,
-		   // followAllRedirects: true
+		    followAllRedirects: true
         });
-
         fs.writeFileSync('./login.html', html);
         const billingHtml = await request.get('https://accounts.craigslist.org/login/home?show_tab=billing');
         fs.writeFileSync('./log.html', billingHtml);
-
-    } catch (error) {
-      console.error(error);
-    }
-}
+	} catch (error) {
+	      console.error(error);
+	    }
+	}
 
 main();
