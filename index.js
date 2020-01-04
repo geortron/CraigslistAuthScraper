@@ -5,8 +5,8 @@ async function main() {
 	try{
 		const html = await request.post('https://accounts.craigslist.org/login', {
 		    form: {
-		      inputEmailHandle: "george.trontsios@gmail.com",
-		      inputPassword: "123!@#wersdf"
+		      inputEmailHandle: "****@gmail.com",
+		      inputPassword: "*****"
 		    },
 		    headers: {
 		       Referer: 'https://accounts.craigslist.org/login'
